@@ -8,8 +8,18 @@ body,
 html {
   background-color: @white;
   color: @text-color;
-  font-size: @text-normal;
   font-family: @font-family;
+}
+
+html {
+  font-size: 10px;
+  .desktop({
+    font-size: 16px;
+  });
+}
+
+body {
+  font-size: @text-normal;
 }
 
 .mx(@left, @right) {
@@ -29,8 +39,28 @@ html {
   });
 }
 
-button {
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.section {
+  padding-top: 3.5rem;
+}
+
+.btn {
   cursor: pointer;
+  background-color: @white;
+  border: none;
+
+  &--flex {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 ul {
